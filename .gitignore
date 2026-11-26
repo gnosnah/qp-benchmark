@@ -1,0 +1,18 @@
+# Local module cache
+.gomodcache/
+
+# Go test / coverage / profiling artifacts
+*.test
+*.out
+*.prof
+coverage.html
+
+# Ad-hoc re-run output (canonical samples are benchmark-*.txt)
+results-v1.0.0/
+
+# Editor / tooling
+.cursor/
+.claude/
+
+# OS
+.DS_Store

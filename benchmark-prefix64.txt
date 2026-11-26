@@ -1,0 +1,54 @@
+goos: linux
+goarch: amd64
+pkg: github.com/gnosnah/qp-benchmark
+cpu: Intel(R) Xeon(R) Platinum 8336C CPU @ 2.30GHz
+BenchmarkBuild/qp/prefix64/n=10000         	      21	   5655539 ns/op	       565.6 ns/key	 1461464 B/op	   23341 allocs/op
+BenchmarkBuild/qp/prefix64/n=10000         	      32	   6580678 ns/op	       658.1 ns/key	 1461464 B/op	   23341 allocs/op
+BenchmarkBuild/qp/prefix64/n=10000         	      16	   7601614 ns/op	       760.2 ns/key	 1461464 B/op	   23341 allocs/op
+BenchmarkBuild/map/prefix64/n=10000        	      82	   1536468 ns/op	       153.6 ns/key	 1076920 B/op	   10035 allocs/op
+BenchmarkBuild/map/prefix64/n=10000        	      99	   1254393 ns/op	       125.4 ns/key	 1076920 B/op	   10035 allocs/op
+BenchmarkBuild/map/prefix64/n=10000        	     100	   1119063 ns/op	       111.9 ns/key	 1076920 B/op	   10035 allocs/op
+BenchmarkBuild/btree/prefix64/n=10000      	      28	   5831176 ns/op	       583.1 ns/key	  708480 B/op	   10705 allocs/op
+BenchmarkBuild/btree/prefix64/n=10000      	      25	   6444205 ns/op	       644.4 ns/key	  708480 B/op	   10705 allocs/op
+BenchmarkBuild/btree/prefix64/n=10000      	      28	   6089500 ns/op	       609.0 ns/key	  708480 B/op	   10705 allocs/op
+BenchmarkBuild/radix/prefix64/n=10000      	       9	  11938859 ns/op	      1194 ns/key	 3761232 B/op	   40832 allocs/op
+BenchmarkBuild/radix/prefix64/n=10000      	      18	  13080576 ns/op	      1308 ns/key	 3761232 B/op	   40832 allocs/op
+BenchmarkBuild/radix/prefix64/n=10000      	      18	  11560898 ns/op	      1156 ns/key	 3761232 B/op	   40832 allocs/op
+BenchmarkGet/qp/prefix64/n=10000/hit       	  902636	       133.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/prefix64/n=10000/hit       	 1428894	        85.58 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/prefix64/n=10000/hit       	 1412124	        98.65 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/prefix64/n=10000/miss      	 2042636	        57.96 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/prefix64/n=10000/miss      	 1787181	        66.26 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/prefix64/n=10000/miss      	 1509416	        67.78 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/prefix64/n=10000/hit      	 2274937	        50.90 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/prefix64/n=10000/hit      	 2330682	        52.22 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/prefix64/n=10000/hit      	 2410233	        49.47 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/prefix64/n=10000/miss     	 3181046	        36.79 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/prefix64/n=10000/miss     	 3316406	        35.72 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/prefix64/n=10000/miss     	 3281002	        37.53 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/btree/prefix64/n=10000/hit    	  278646	       470.8 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/prefix64/n=10000/hit    	  253380	       569.2 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/prefix64/n=10000/hit    	  232974	       500.1 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/prefix64/n=10000/miss   	  228394	       541.2 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/prefix64/n=10000/miss   	  243849	       550.5 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/prefix64/n=10000/miss   	  241950	       519.3 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/radix/prefix64/n=10000/hit    	  462775	       259.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/prefix64/n=10000/hit    	  472100	       263.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/prefix64/n=10000/hit    	  317716	       322.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/prefix64/n=10000/miss   	  294253	       383.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/prefix64/n=10000/miss   	  329742	       363.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/prefix64/n=10000/miss   	  383629	       305.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotUpdate16/qp/prefix64/n=10000         	   10000	     15412 ns/op	    9432 B/op	      81 allocs/op
+BenchmarkSnapshotUpdate16/qp/prefix64/n=10000         	   10000	     18366 ns/op	    9432 B/op	      81 allocs/op
+BenchmarkSnapshotUpdate16/qp/prefix64/n=10000         	   10000	     15087 ns/op	    9432 B/op	      81 allocs/op
+BenchmarkSnapshotUpdate16/map/prefix64/n=10000        	     488	    256231 ns/op	  437944 B/op	      51 allocs/op
+BenchmarkSnapshotUpdate16/map/prefix64/n=10000        	     507	    257635 ns/op	  437944 B/op	      51 allocs/op
+BenchmarkSnapshotUpdate16/map/prefix64/n=10000        	     390	    290084 ns/op	  437944 B/op	      51 allocs/op
+BenchmarkSnapshotUpdate16/btree/prefix64/n=10000      	   10000	     21481 ns/op	   23512 B/op	      62 allocs/op
+BenchmarkSnapshotUpdate16/btree/prefix64/n=10000      	    6908	     25074 ns/op	   23512 B/op	      62 allocs/op
+BenchmarkSnapshotUpdate16/btree/prefix64/n=10000      	   10000	     23139 ns/op	   23512 B/op	      62 allocs/op
+BenchmarkSnapshotUpdate16/radix/prefix64/n=10000      	    1521	     71934 ns/op	   66763 B/op	     173 allocs/op
+BenchmarkSnapshotUpdate16/radix/prefix64/n=10000      	    1790	     64476 ns/op	   66763 B/op	     173 allocs/op
+BenchmarkSnapshotUpdate16/radix/prefix64/n=10000      	    1934	     60788 ns/op	   66763 B/op	     173 allocs/op
+PASS
+ok  	github.com/gnosnah/qp-benchmark	6.924s

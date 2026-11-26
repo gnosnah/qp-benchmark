@@ -1,0 +1,54 @@
+goos: linux
+goarch: amd64
+pkg: github.com/gnosnah/qp-benchmark
+cpu: Intel(R) Xeon(R) Platinum 8336C CPU @ 2.30GHz
+BenchmarkBuild/qp/domain/n=10000         	      28	   4626214 ns/op	       462.6 ns/key	 1528920 B/op	   25559 allocs/op
+BenchmarkBuild/qp/domain/n=10000         	      34	   4464721 ns/op	       446.5 ns/key	 1528920 B/op	   25559 allocs/op
+BenchmarkBuild/qp/domain/n=10000         	      33	   4570833 ns/op	       457.1 ns/key	 1528920 B/op	   25559 allocs/op
+BenchmarkBuild/map/domain/n=10000        	      94	   1371844 ns/op	       137.2 ns/key	  916920 B/op	   10035 allocs/op
+BenchmarkBuild/map/domain/n=10000        	     100	   1244426 ns/op	       124.4 ns/key	  916920 B/op	   10035 allocs/op
+BenchmarkBuild/map/domain/n=10000        	     100	   1285727 ns/op	       128.6 ns/key	  916920 B/op	   10035 allocs/op
+BenchmarkBuild/btree/domain/n=10000      	      24	   5211425 ns/op	       521.1 ns/key	  708480 B/op	   10705 allocs/op
+BenchmarkBuild/btree/domain/n=10000      	      30	   5672900 ns/op	       567.3 ns/key	  708480 B/op	   10705 allocs/op
+BenchmarkBuild/btree/domain/n=10000      	      31	   4801108 ns/op	       480.1 ns/key	  708480 B/op	   10705 allocs/op
+BenchmarkBuild/radix/domain/n=10000      	       9	  13506630 ns/op	      1351 ns/key	 4864672 B/op	   57374 allocs/op
+BenchmarkBuild/radix/domain/n=10000      	       9	  13701504 ns/op	      1370 ns/key	 4864673 B/op	   57374 allocs/op
+BenchmarkBuild/radix/domain/n=10000      	       8	  14952820 ns/op	      1495 ns/key	 4864672 B/op	   57374 allocs/op
+BenchmarkGet/qp/domain/n=10000/hit       	 1205512	        92.81 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/domain/n=10000/hit       	 1299882	        91.84 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/domain/n=10000/hit       	 1348924	        90.16 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/domain/n=10000/miss      	 1704930	        68.61 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/domain/n=10000/miss      	 1731699	        69.05 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/qp/domain/n=10000/miss      	 1737841	        69.97 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/domain/n=10000/hit      	 1863591	        56.52 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/domain/n=10000/hit      	 2350731	        50.29 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/domain/n=10000/hit      	 2380400	        50.25 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/domain/n=10000/miss     	 4234717	        27.95 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/domain/n=10000/miss     	 4002484	        29.85 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/map/domain/n=10000/miss     	 3646426	        32.70 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/btree/domain/n=10000/hit    	  296391	       465.1 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/domain/n=10000/hit    	  325891	       393.7 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/domain/n=10000/hit    	  305097	       411.3 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/domain/n=10000/miss   	  266949	       439.6 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/domain/n=10000/miss   	  280060	       442.3 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/btree/domain/n=10000/miss   	  297458	       410.6 ns/op	      32 B/op	       1 allocs/op
+BenchmarkGet/radix/domain/n=10000/hit    	  414990	       282.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/domain/n=10000/hit    	  295153	       350.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/domain/n=10000/hit    	  386666	       304.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/domain/n=10000/miss   	  395688	       296.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/domain/n=10000/miss   	  394537	       299.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGet/radix/domain/n=10000/miss   	  375789	       302.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSnapshotUpdate16/qp/domain/n=10000         	   10000	     14955 ns/op	    8520 B/op	      99 allocs/op
+BenchmarkSnapshotUpdate16/qp/domain/n=10000         	   10000	     14989 ns/op	    8520 B/op	      99 allocs/op
+BenchmarkSnapshotUpdate16/qp/domain/n=10000         	   10000	     15170 ns/op	    8520 B/op	      99 allocs/op
+BenchmarkSnapshotUpdate16/map/domain/n=10000        	     418	    258986 ns/op	  437688 B/op	      51 allocs/op
+BenchmarkSnapshotUpdate16/map/domain/n=10000        	     538	    218509 ns/op	  437688 B/op	      51 allocs/op
+BenchmarkSnapshotUpdate16/map/domain/n=10000        	     554	    222622 ns/op	  437688 B/op	      51 allocs/op
+BenchmarkSnapshotUpdate16/btree/domain/n=10000      	    5115	     23044 ns/op	   23512 B/op	      62 allocs/op
+BenchmarkSnapshotUpdate16/btree/domain/n=10000      	    5358	     23142 ns/op	   23512 B/op	      62 allocs/op
+BenchmarkSnapshotUpdate16/btree/domain/n=10000      	    5350	     22525 ns/op	   23512 B/op	      62 allocs/op
+BenchmarkSnapshotUpdate16/radix/domain/n=10000      	    3109	     53785 ns/op	   28928 B/op	     315 allocs/op
+BenchmarkSnapshotUpdate16/radix/domain/n=10000      	    1790	     58945 ns/op	   28928 B/op	     315 allocs/op
+BenchmarkSnapshotUpdate16/radix/domain/n=10000      	    2365	     49955 ns/op	   28928 B/op	     315 allocs/op
+PASS
+ok  	github.com/gnosnah/qp-benchmark	6.379s
